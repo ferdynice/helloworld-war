@@ -1,0 +1,47 @@
+<project name="helloworld" default="war">
+	<property name="src" location="src/java" />
+	<property name="libcompile" location="lib/compile" />
+	<property name="libruntime" location="lib/runtime" />
+	<property name="web" location="web" />
+	<property name="webxml" location="${web}/WEB-INF/web.xml" />
+	<property name="build" location="build" />
+	<property name="classes" location="${build}/classes" />
+
+	<property name="version" value="0.1-dev" />
+	<property name="target" value="1.7" />
+
+	<path id="classpath">
+		<fileset dir="${libcompile}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${libruntime}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${build}" />
+		<mkdir dir="${classes}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac includeantruntime="false" 
+		srcdir="${src}" destdir="${classes}" target="${target}">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<target name="war" depends="compile">
+		<war destfile="${build}/${ant.project.name}-${version}.war"
+			webxml="${webxml}">
+			<fileset dir="${web}" />
+			<lib dir="${libruntime}" />
+			<classes dir="${classes}" />
+		</war>
+	</target>
+
+</project>
