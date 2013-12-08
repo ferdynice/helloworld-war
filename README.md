@@ -1,6 +1,6 @@
 # Helloworld WAR
 
-### A really simple example Java WAR project
+### A simple example Java WAR project
 
 Contains:
 - Helloworld servlet
@@ -18,7 +18,7 @@ such as Spring or Guice. (Although you can add this easily).
 The nature is an Eclipse project,
 it contains a minimal .classpath and .project file.
 
-To build a WAR that you can deploy (for example Tomcat or Jetty),
+To build a WAR that you can deploy (for example to Tomcat or Jetty),
 you can run 'ant' from the project root.
 
 Typically, during development, you want run the application directly
@@ -27,4 +27,3 @@ This is possible thanks to embedding Jetty:
 For this, run 'WebAppUnassembled' as Java application from within Eclipse.
 
 Licensed under [Eclipse Public License](http://www.eclipse.org/legal/epl-v10.html). 
-
