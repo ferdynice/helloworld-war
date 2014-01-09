@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.1">
-    <servlet>
-        <servlet-name>helloworld</servlet-name>
-        <servlet-class>mypackage.HelloworldServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>helloworld</servlet-name>
-        <url-pattern>/helloworld</url-pattern>
-    </servlet-mapping>
-    <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-    </welcome-file-list>
+	
+	<!-- add servlets, filters and context listeners with annotations -->
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 </web-app>
