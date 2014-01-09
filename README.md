@@ -35,9 +35,9 @@ This is possible thanks to embedding Jetty.
 For this, run 'WebAppUnassembled' as a Java application.
 
 Note that it is not trivial to dynamically load the annotated servlets this way.
-(Most examples around the web involve creating a war file, which defeat some purposes).
+(Most examples around the web involve around creating a war file, which defeat some purposes).
 However WebAppUnassembled tries a best effort to do this by using Classpath scanning,
-still picking the essential annotations with basic options.
+still picking up the essential annotations with basic options.
 The annotations are WebServlet, WebFilter and WebListener.
 
 It uses the Google Guava helper library, which is a nice utility to have anyway.
