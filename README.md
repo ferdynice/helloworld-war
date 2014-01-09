@@ -12,7 +12,7 @@ Contains:
 - Jetty embedded server for running directly in Eclipe
 
 It should work with Java 6, 7 and upwards.
-and it doesn't contain any dependendency injection specific frameworks,
+It doesn't contain any dependendency injection specific frameworks,
 such as Spring or Guice. (Although you can add this easily).
 
 The nature is an Eclipse project,
