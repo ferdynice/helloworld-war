@@ -20,6 +20,14 @@ import com.google.common.reflect.ClassPath;
 
 public class WebAppUnassembled
 {
+	static {
+		//this will log to to standard out instead of standard err.
+		System.setProperty("org.slf4j.simpleLogger.logFile", "System.out");
+		//have nice datetime stamps in the log lines
+		System.setProperty("org.slf4j.simpleLogger.showDateTime", "true");
+		System.setProperty("org.slf4j.simpleLogger.dateTimeFormat", "yyyy-MM-dd HH:mm:ss.SSS");
+	}
+	
     public static void main(String[] args) throws Exception
     {
         Server server = new Server(8080);
